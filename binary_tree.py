@@ -1,4 +1,4 @@
-# Breadth First Search Algorithm
+# Binary Tree Algorithm
 
 class Node():
     def __init__(self,value):
