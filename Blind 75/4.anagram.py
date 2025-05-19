@@ -33,10 +33,10 @@ def anagram_program(str1,str2):
     return True
 
 
-s = "anagram", t = "nagaram"
+s = "anagram"
+t = "nagaram"
 print(anagram_program(s,t))
 
-s = "rat", t = "car"
+s = "rat"
+t = "car"
 print(anagram_program(s,t))
-
-#
