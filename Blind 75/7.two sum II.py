@@ -39,3 +39,7 @@ def two_sum_2(numbers,target):
 numbers = [2,7,11,15]
 target = 9
 print(two_sum_2(numbers,target))
+
+numbers = [2,3,4]
+target = 6
+print(two_sum_2(numbers,target))
