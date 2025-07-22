@@ -19,8 +19,31 @@
 # Explanation: s is an empty string "" after removing non-alphanumeric characters.
 # Since an empty string reads the same forward and backward, it is a palindrome.
 
+# def valid_palindrome(s):
+#     left, right = 0, len(s) - 1
+#     while left < right:
+#         while left < right and not s[left].isalnum():
+#             left += 1
+#         while left < right and not s[right].isalnum():
+#             right -= 1
+#         if s[left].lower() != s[right].lower():
+#             return False
+#         left += 1
+#         right -= 1
+#     return True
+
+# s = "A man, a plan, a canal: Panama"
+# print(valid_palindrome(s))
+
+# s = "race a car"
+# print(valid_palindrome(s))
+
+# s = " "
+# print(valid_palindrome(s))
+
 def valid_palindrome(s):
-    left, right = 0, len(s) - 1
+    left = 0
+    right = len(s) - 1
     while left < right:
         while left < right and not s[left].isalnum():
             left += 1
@@ -31,7 +54,7 @@ def valid_palindrome(s):
         left += 1
         right -= 1
     return True
-
+    
 s = "A man, a plan, a canal: Panama"
 print(valid_palindrome(s))
 
