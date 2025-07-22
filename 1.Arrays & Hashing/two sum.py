@@ -17,7 +17,30 @@
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
 
-def two_sum_unsorted(nums,target):
+# def two_sum_unsorted(nums,target):
+#     num_to_index = {}
+#     for i,num in enumerate(nums):
+#         compliment = target - num
+#         if compliment in num_to_index:
+#             return [num_to_index[compliment],i]
+#         num_to_index[num] = i
+#     return []
+
+
+# nums = [2,7,11,15]
+# target = 9
+# print(two_sum_unsorted(nums,target))
+
+# nums = [2,3,4]
+# target = 6
+# print(two_sum_unsorted(nums,target))
+
+# nums = [3,3]
+# target = 6
+# print(two_sum_unsorted(nums,target))
+
+
+def two_sum(nums,target):
     num_to_index = {}
     for i,num in enumerate(nums):
         compliment = target - num
@@ -29,12 +52,12 @@ def two_sum_unsorted(nums,target):
 
 nums = [2,7,11,15]
 target = 9
-print(two_sum_unsorted(nums,target))
+print(two_sum(nums,target))
 
-nums = [2,3,4]
+nums = [3,2,4]
 target = 6
-print(two_sum_unsorted(nums,target))
+print(two_sum(nums,target))
 
 nums = [3,3]
 target = 6
-print(two_sum_unsorted(nums,target))
+print(two_sum(nums,target))
