@@ -9,26 +9,27 @@
 # Input: s = "rat", t = "car"
 # Output: false
 
-def valid_anagram(s,t):
+def check_anagram(s,t):
     if len(s) != len(t):
         return False
     
     count = [0] * 26
     for i in range(len(s)):
-        count[ord(s[i]) - ord('a')] += 1
-        count[ord(t[i]) - ord('a')] -= 1
+        count[ord(s[i]) - ord("a")] += 1
+        count[ord(t[i]) - ord("a")] -= 1
 
     for val in count:
         if val != 0:
             return False
     return True
 
+
 s = "anagram"
 t = "nagaram"
-print(valid_anagram(s,t))
+print(check_anagram(s,t))
 
 s = "rat"
 t = "car"
-print(valid_anagram(s,t))
+print(check_anagram(s,t))
 
 
