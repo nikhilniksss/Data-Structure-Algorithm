@@ -41,7 +41,7 @@
 # s = " "
 # print(valid_palindrome(s))
 
-def valid_palindrome(s):
+def valid_palindrom(s):
     left = 0
     right = len(s) - 1
     while left < right:
@@ -54,12 +54,13 @@ def valid_palindrome(s):
         left += 1
         right -= 1
     return True
+
     
 s = "A man, a plan, a canal: Panama"
-print(valid_palindrome(s))
+print(valid_palindrom(s))
 
 s = "race a car"
-print(valid_palindrome(s))
+print(valid_palindrom(s))
 
 s = " "
-print(valid_palindrome(s))
+print(valid_palindrom(s))
