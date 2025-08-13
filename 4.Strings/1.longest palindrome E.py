@@ -37,3 +37,6 @@ def longest_palindrome(s):
 
 s = "abccccdd"
 print(longest_palindrome(s))
+
+s = "a"
+print(longest_palindrome(s))
