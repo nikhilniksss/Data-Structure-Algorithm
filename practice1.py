@@ -63,3 +63,6 @@ print(valid_anagram(s,t))
 s = "rat"
 t = "car"
 print(valid_anagram(s,t))
+
+###### Problem 3 #######
+
