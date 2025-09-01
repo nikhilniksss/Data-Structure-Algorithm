@@ -11,7 +11,7 @@
 # Input: height = [1,1]
 # Output: 1
 
-# Brute force
+########## Brute force ############
 
 def container_water(height):
     res = 0
@@ -28,11 +28,24 @@ print(container_water(height))
 height = [1,1]
 print(container_water(height))
 
-# optimized solution
+########## optimized solution ##########
 
 def container_water_efficient(height):
     res = 0
     left = 0
     right = len(height) - 1
     while left < right:
-        
+        area = (right - left) * min(height[left],height[right])
+        res = max(res,area)
+
+        if height[left] < height[right]:
+            left += 1
+        else:
+            right -= 1
+    return res
+
+height = [1,8,6,2,5,4,8,3,7]
+print(container_water_efficient(height))
+
+height = [1,1]
+print(container_water_efficient(height))
