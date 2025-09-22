@@ -22,3 +22,22 @@
 # Output: 11
 # Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
+
+def findMin(nums):
+    l,r = 0,len(nums) - 1
+    while l < r:
+        m = l + (r - l) // 2
+        if nums[m] < nums[r]:
+            r = m
+        else:
+            l = m + 1
+    return nums[l]
+
+nums = [3,4,5,1,2]
+print(findMin(nums))
+
+nums = [4,5,6,7,0,1,2]
+print(findMin(nums))
+
+nums = [11,13,15,17]
+print(findMin(nums))
