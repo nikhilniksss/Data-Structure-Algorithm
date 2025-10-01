@@ -1,6 +1,6 @@
 # Invert Binary Tree
 
-def invertTree(root):
+def invertTree(self,root):
     if not root:
         return None
     
